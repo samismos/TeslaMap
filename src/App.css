@@ -1,21 +1,24 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 4vh;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,12 +30,21 @@
 .App-link {
   color: #61dafb;
 }
+.map-container {
+  height: calc(100vh-5vh);
+}
 
 @keyframes App-logo-spin {
-  from {
+  0% {
     transform: rotate(0deg);
+    scale:50%;
   }
-  to {
-    transform: rotate(360deg);
+  90% {
+    transform: rotate(1080deg);
+    scale: 100%;
+  }
+  100% {
+    transform: rotate(720deg);
+    scale: 50%;
   }
 }
